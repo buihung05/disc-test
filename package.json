@@ -1,9 +1,10 @@
 {
-  "name": "discord-bot-root",
+  "name": "discordbot-workspace",
+  "version": "1.0.0",
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "start": "node discord-bot/run-bots.js",
-    "dashboard": "node discord-bot/dashboard-server.js"
+    "start": "node run-bots.js",
+    "dashboard": "node dashboard-server.js"
   }
 }

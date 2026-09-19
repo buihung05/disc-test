@@ -1,0 +1,16 @@
+{
+  "bots": [
+    {
+      "name": "bot-node-1",
+      "command": "npm",
+      "args": ["run", "start"],
+      "cwd": "bots/bot-node-1"
+    },
+    {
+      "name": "bot-python-1",
+      "command": "python",
+      "args": ["main.py"],
+      "cwd": "bots/bot-python-1"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101827" />
+    <title>Bot Control Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="Bot Control Center">
+          <span class="brand-mark">B</span>
+          <span>Bot<span>Center</span></span>
+        </a>
+
+        <nav aria-label="Điều hướng chính">
+          <a class="nav-link active" href="#top"><span>⊞</span> Tổng quan</a>
+          <a class="nav-link" href="#bots"><span>◉</span> Bot của bạn <b>4</b></a>
+          <a class="nav-link" href="#activity"><span>⌁</span> Nhật ký hoạt động</a>
+          <a class="nav-link" href="#settings"><span>⚙</span> Cài đặt</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="environment"><i></i><span>Production</span></div>
+          <p>Discord bot workspace<br /><small>v1.0.0</small></p>
+        </div>
+      </aside>
+
+      <section class="content" id="top">
+        <header class="topbar">
+          <button class="menu-button" aria-label="Mở menu">☰</button>
+          <div class="breadcrumb">Workspace <span>/</span> Tổng quan</div>
+          <div class="profile"><span class="avatar">A</span><span>Admin</span><button aria-label="Tài khoản">⌄</button></div>
+        </header>
+
+        <div class="page">
+          <section class="hero">
+            <div>
+              <p class="eyebrow">TRUNG TÂM ĐIỀU KHIỂN</p>
+              <h1>Chào buổi tối, Admin <span>✦</span></h1>
+              <p class="muted">Theo dõi và quản lý tất cả Discord bot của bạn ở một nơi.</p>
+            </div>
+            <div class="hero-actions">
+              <button class="button secondary" data-action="refresh">↻ Làm mới</button>
+              <button class="button primary" data-action="start-all">▶ Khởi động tất cả</button>
+            </div>
+          </section>
+
+          <section class="stats" aria-label="Tóm tắt hệ thống">
+            <article><div class="stat-icon blue">◉</div><div><p>Bot đang chạy</p><strong>4 <small>/ 4</small></strong></div><span class="trend good">↑ 100%</span></article>
+            <article><div class="stat-icon purple">⌁</div><div><p>Thời gian hoạt động</p><strong>99.98<small>%</small></strong></div><span class="trend good">↑ 0.02%</span></article>
+            <article><div class="stat-icon orange">ϟ</div><div><p>Độ trễ trung bình</p><strong>42 <small>ms</small></strong></div><span class="trend good">↓ 8ms</span></article>
+            <article><div class="stat-icon pink">▣</div><div><p>Lệnh hôm nay</p><strong>1,284</strong></div><span class="trend good">↑ 12.5%</span></article>
+          </section>
+
+          <section class="section-heading" id="bots"><div><h2>Bot của bạn</h2><p>Quản lý trạng thái và thao tác nhanh từng bot.</p></div><button class="text-button">Xem tất cả <span>→</span></button></section>
+
+          <section class="bot-grid">
+            <article class="bot-card" data-bot="ai">
+              <div class="card-top"><div class="bot-symbol ai">✦</div><span class="status online"><i></i> Đang chạy</span></div>
+              <h3>AI Discord</h3><p>Trợ lý AI Groq phản hồi qua mention.</p>
+              <dl><div><dt>Uptime</dt><dd>2d 14h</dd></div><div><dt>Ping</dt><dd>38 ms</dd></div></dl>
+              <div class="card-actions"><button class="icon-button" data-action="logs" aria-label="Xem log AI Discord">⌁</button><button class="icon-button" data-action="restart" aria-label="Khởi động lại AI Discord">↻</button><button class="button stop" data-action="stop">■ Dừng</button></div>
+            </article>
+            <article class="bot-card" data-bot="nhaca">
+              <div class="card-top"><div class="bot-symbol fish">♧</div><span class="status online"><i></i> Đang chạy</span></div>
+              <h3>Fishfarm · Nhạc</h3><p>Điểm danh, số dư và quản lý cá.</p>
+              <dl><div><dt>Uptime</dt><dd>2d 14h</dd></div><div><dt>Ping</dt><dd>46 ms</dd></div></dl>
+              <div class="card-actions"><button class="icon-button" data-action="logs" aria-label="Xem log Fishfarm nhạc">⌁</button><button class="icon-button" data-action="restart" aria-label="Khởi động lại Fishfarm nhạc">↻</button><button class="button stop" data-action="stop">■ Dừng</button></div>
+            </article>
+            <article class="bot-card" data-bot="random">
+              <div class="card-top"><div class="bot-symbol dice">⚄</div><span class="status online"><i></i> Đang chạy</span></div>
+              <h3>Fishfarm · Random</h3><p>Trò chơi cá lớn, cá bé bằng xúc xắc.</p>
+              <dl><div><dt>Uptime</dt><dd>2d 14h</dd></div><div><dt>Ping</dt><dd>41 ms</dd></div></dl>
+              <div class="card-actions"><button class="icon-button" data-action="logs" aria-label="Xem log Fishfarm random">⌁</button><button class="icon-button" data-action="restart" aria-label="Khởi động lại Fishfarm random">↻</button><button class="button stop" data-action="stop">■ Dừng</button></div>
+            </article>
+            <article class="bot-card" data-bot="manager">
+              <div class="card-top"><div class="bot-symbol shield">♜</div><span class="status online"><i></i> Đang chạy</span></div>
+              <h3>Quản trị Server</h3><p>Chào thành viên và điều hành máy chủ.</p>
+              <dl><div><dt>Uptime</dt><dd>2d 14h</dd></div><div><dt>Ping</dt><dd>43 ms</dd></div></dl>
+              <div class="card-actions"><button class="icon-button" data-action="logs" aria-label="Xem log bot quản trị">⌁</button><button class="icon-button" data-action="restart" aria-label="Khởi động lại bot quản trị">↻</button><button class="button stop" data-action="stop">■ Dừng</button></div>
+            </article>
+          </section>
+
+          <section class="lower-grid" id="activity">
+            <article class="panel activity-panel"><div class="panel-heading"><div><h2>Hoạt động gần đây</h2><p>Sự kiện mới nhất từ các bot.</p></div><button class="text-button">Xem log</button></div>
+              <ul class="activity-list">
+                <li><span class="event-dot success">✓</span><div><strong>AI Discord</strong><p>Đã phản hồi một tin nhắn mới.</p></div><time>vừa xong</time></li>
+                <li><span class="event-dot info">↗</span><div><strong>Fishfarm · Nhạc</strong><p>Đã xử lý lệnh <code>/diem-danh</code>.</p></div><time>2 phút</time></li>
+                <li><span class="event-dot info">↗</span><div><strong>Fishfarm · Random</strong><p>Đã hoàn tất một lượt chơi cá.</p></div><time>8 phút</time></li>
+                <li><span class="event-dot success">✓</span><div><strong>Quản trị Server</strong><p>Đã gửi lời chào thành viên mới.</p></div><time>16 phút</time></li>
+              </ul>
+            </article>
+            <article class="panel quick-panel" id="settings"><div class="panel-heading"><div><h2>Thao tác nhanh</h2><p>Điều khiển toàn bộ hệ thống.</p></div></div>
+              <button class="quick-action" data-action="restart-all"><span class="quick-icon restart">↻</span><span><strong>Khởi động lại tất cả</strong><small>Restart 4 bot đang hoạt động</small></span><b>→</b></button>
+              <button class="quick-action" data-action="logs"><span class="quick-icon logs">⌁</span><span><strong>Mở nhật ký hệ thống</strong><small>Xem log theo thời gian thực</small></span><b>→</b></button>
+              <button class="quick-action danger" data-action="stop-all"><span class="quick-icon power">■</span><span><strong>Dừng tất cả bot</strong><small>Tắt an toàn mọi tiến trình</small></span><b>→</b></button>
+            </article>
+          </section>
+          <section class="admin-tools">
+            <article class="panel tool-panel"><div class="panel-heading"><div><h2>Quản trị thành viên</h2><p>Dùng quyền của bot Quản trị Server.</p></div><span class="tool-badge">Discord</span></div>
+              <form id="member-form" class="control-form"><label>Guild ID<input name="guildId" required placeholder="ID máy chủ Discord" /></label><label>Member ID<input name="userId" required placeholder="ID thành viên" /></label><label>Thao tác<select name="action"><option value="nickname">Đổi biệt danh</option><option value="add-role">Thêm role</option><option value="remove-role">Gỡ role</option><option value="kick">Kick thành viên</option></select></label><label id="member-extra">Biệt danh / Role ID<input name="value" placeholder="Nhập dữ liệu cần thiết" /></label><button class="button primary" type="submit">Thực hiện</button></form><p class="form-message" id="member-message"></p>
+            </article>
+            <article class="panel tool-panel"><div class="panel-heading"><div><h2>Quản lý số cá</h2><p>Cập nhật trực tiếp dữ liệu Fishfarm.</p></div><span class="tool-badge fish-badge">Fishfarm</span></div>
+              <form id="fish-form" class="control-form"><label>Discord User ID<input name="userId" required placeholder="ID thành viên" /></label><label>Thao tác<select name="action"><option value="get">Xem số dư</option><option value="add">Thêm cá</option><option value="set">Đặt số dư</option><option value="remove">Trừ cá</option></select></label><label>Số lượng<input name="amount" type="number" min="0" value="0" required /></label><button class="button primary" type="submit">Cập nhật số cá</button></form><p class="form-message" id="fish-message"></p>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+    <dialog id="log-dialog"><div class="dialog-title"><strong>Nhật ký hệ thống</strong><button data-close-log aria-label="Đóng">×</button></div><pre id="log-output">Đang tải...</pre></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
